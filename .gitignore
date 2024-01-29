@@ -1,0 +1,8 @@
+.env
+__pycache__
+cache/
+exports/
+*.log
+*config
+config*
+OAI_CONFIG_LIST.json
