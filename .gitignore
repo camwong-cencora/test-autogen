@@ -6,3 +6,4 @@ exports/
 *config
 config*
 OAI_CONFIG_LIST.json
+venv_autogen/
