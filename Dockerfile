@@ -3,6 +3,11 @@
 # Licensed under the MIT License. See LICENSE file in the project root for license information.
 #-------------------------------------------------------------------------------------------------------------
 
+# Build image: docker build -t autogen-test .
+
+# Run locally: docker run autogen-test
+# Run in Docker: docker run -it -v ../test-autogen autogen-test:latest python ./my_app.py
+
 FROM mcr.microsoft.com/vscode/devcontainers/python:3.10
 
 #
@@ -20,3 +25,18 @@ ENV DEBIAN_FRONTEND=dialog
 # For docs
 RUN npm install --global yarn
 RUN pip install pydoc-markdown
+
+# Import dependencies file
+COPY requirements.txt /opt/app/requirements.txt
+
+# Set working directory
+WORKDIR /opt/app
+
+# Install dependencies
+RUN python -m pip install -r requirements.txt
+
+# Import remaining project
+COPY . /opt/app/
+
+# Run script
+CMD ["python", "./my_app.py"]

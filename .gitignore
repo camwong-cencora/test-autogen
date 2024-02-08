@@ -7,3 +7,4 @@ exports/
 config*
 OAI_CONFIG_LIST.json
 venv_autogen/
+.cache/
