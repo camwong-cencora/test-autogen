@@ -159,7 +159,7 @@ initial_message = """
     - Data sources required for the project.
     - Key performance metrics for success of the project.
 
-    Save the markdown table to a file in the current working directory named "projects.md".
+    Save the markdown table to a file in the current working directory named "dpx_projects.md".
 """
 
 user_agent.initiate_chat(
