@@ -158,6 +158,8 @@ initial_message = """
     - A short description of the project.
     - Data sources required for the project.
     - Key performance metrics for success of the project.
+
+    Save the markdown table to a file in the current working directory named "projects.md".
 """
 
 user_agent.initiate_chat(
